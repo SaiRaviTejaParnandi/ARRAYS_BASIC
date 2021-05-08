@@ -1,0 +1,38 @@
+
+
+#include <iostream>
+
+using namespace std;
+int min_distance(int a,int b,int arr[],int size)
+{   int a_dis=0;
+    int b_dis=0;
+    int n = size;
+    for (int i=0;i<n;i++)
+    {
+        if (arr[i]==a)
+        {
+            a_dis=i;
+        }
+        else if(arr[i]=b)
+        {
+            b_dis=i;
+        }
+        
+    }
+    cout<<a_dis<<endl;
+    cout<<b_dis<<endl;
+    return abs(b_dis-a_dis);
+}
+
+int main()
+{   int a,b,dis;
+    cout<<"welcome to min distance"<<endl;
+    int arr[] = {2, 5, 3, 5, 4, 4, 2, 3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout<<"enter numbers you want to find the minimum  distance between"<<endl;
+    cin>>a>>b;
+    dis=min_distance(a,b,arr,n);
+    cout<<"the min distance is "<<dis<<endl;
+
+    return 0;
+}
