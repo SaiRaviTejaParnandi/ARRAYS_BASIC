@@ -1,0 +1,34 @@
+
+
+#include <iostream>
+
+using namespace std;
+void move_zeroes(int arr[],int n)
+{   int count=0;
+    int temp=0;
+    for (int i=0;i<n;i++)
+    {  
+        if (arr[i]!=0)
+        {
+            temp=arr[i];
+            arr[i]=arr[count];
+            arr[count]=temp;
+            count++;
+        }
+    }
+    for (int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
+
+int main()
+{   int a,b,dis;
+    cout<<"welcome to moving zeroes at the end  of an array"<<endl;
+    int arr[] = {0, 5, 3, 0, 4, 0, 2, 0};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    move_zeroes(arr,n);
+
+    return 0;
+}
