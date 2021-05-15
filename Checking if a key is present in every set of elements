@@ -1,0 +1,23 @@
+int main() {
+int arr[] = { 21, 23, 56, 65, 34, 54, 76, 32, 23, 45, 21, 23, 25} ;
+int x = 23;
+int k = 5;
+int n = sizeof(arr) / sizeof(arr[0]);
+int a,b,count=0;
+a=0;
+b=k-1;
+for (int i=a;i<=b;i++)
+{
+
+if(arr[i]==x)
+{
+
+a=b+1;
+b=b+k;
+count++;
+
+}
+}
+cout<<"the final count is"<<count<<endl; if="" (count="">=n/k)
+{
+cout<<"yes"<<endl; }="" else="" {="" cout<<"no"<<endl;="" }="" return="" 0;="" }="">
